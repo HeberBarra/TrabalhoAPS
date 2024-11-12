@@ -1,0 +1,165 @@
+%! TEX TS-program = lualatex
+\documentclass[12pt,openright,oneside,a4paper,
+	chapter=TITLE,
+	section=TITLE,
+	english,brazil]{abntex2}
+\usepackage[alf]{abntex2cite}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage[none]{hyphenat}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+
+\setmainfont{Arial}
+\setlength{\parindent}{1.5cm}
+\setlength{\emergencystretch}{2cm}
+\setlength{\cftbeforeparagraphskip}{0pt}
+\setlength{\cftbeforesubsubsubsectionskip}{0pt}
+\setlength{\cftbeforechapterskip}{0pt}
+\setlength{\cftbeforesubsubsectionskip}{0pt}
+
+\author{Heber Ferreira Barra \\ João Gabriel de Cristo}
+\titulo{Trabalho de Pesquisa UML}
+\date{2024}
+\instituicao{Instituto Federal do Paraná}
+\local{Curitiba}
+\preambulo{Trabalho de pesquisa sobre diagramas UML.}
+\tipotrabalho{pesquisa}
+\orientador{Elaini Simoni Angelotti}
+
+\makeatletter
+\hypersetup{
+    pdfauthor={\@author},
+    pdfsubject={\imprimirpreambulo},
+    pdfcreator={LaTeX with abntex2},
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+\makeatother
+
+\renewcommand{\ABNTEXchapterfont}{\bfseries\MakeUppercase\sffamily}
+\renewcommand{\ABNTEXchapterfontsize}{\normal}
+\renewcommand{\ABNTEXsectionfont}{\MakeUppercase\sffamily}
+\renewcommand{\ABNTEXsectionfontsize}{\normal}
+\renewcommand{\labelenumi}{\theenumi}
+\renewcommand{\theenumi}{\Roman{enumi} -}%
+\renewcommand{\authorcapstyle}{\normal}
+\renewcommand{\cftsectionfont}{\normalfont\MakeUppercase}
+\newcommand{\bibtextitlecommand}[2]{\bf{#2}}
+\newcommand{\authorstyle}{\relax}
+
+\renewcommand{\imprimircapa}{%
+	\begin{capa}
+		\center
+		\ABNTEXchapterfont\bfseries\MakeUppercase\imprimirinstituicao\\
+		\vspace*{1cm}
+		\ABNTEXchapterfont\bfseries\MakeUppercase\imprimirautor
+		\vfill
+		\begin{center}
+			\ABNTEXchapterfont\bfseries\MakeUppercase\imprimirtitulo
+		\end{center}
+		\vfill
+
+		\bfseries\MakeUppercase\imprimirlocal
+
+		\bfseries\MakeUppercase\imprimirdata
+
+		\vspace*{1cm}
+	\end{capa}
+}
+
+\makeatletter
+\renewcommand{\folhaderostocontent} {
+	\center
+	{\normal\imprimirautor}
+
+	\vspace*{\fill}
+	\begin{center}
+		\ABNTEXchapterfont\bfseries\MakeUppercase\imprimirtitulo
+	\end{center}
+
+	\abntex@ifnotempty{\imprimirpreambulo}{%
+		\hspace{.45\textwidth}
+		\begin{minipage}{.5\textwidth}
+			\SingleSpacing
+			\small\imprimirpreambulo \\
+			\\
+			\imprimirorientadorRotulo\ \imprimirorientador
+		\end{minipage}
+	}
+
+	\vspace*{\fill}
+	{\imprimirlocal}
+	\par
+	\imprimirdata
+	\vspace*{1cm}
+}
+\makeatother
+
+\begin{document}
+\selectlanguage{brazil}
+\imprimircapa
+\imprimirfolhaderosto
+
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+\textual
+\chapter{Introdução à UML}
+
+\chapter{Diagrama de Atividades}
+
+\section{Objetivo do Diagrama de Atividades}
+
+\section{Principais Componentes do Diagrama de Atividades}
+
+\section{Exemplo do Diagrama de Atividades}
+
+\chapter{Diagrama de Sequência}
+
+\section{Objetivo do Diagrama de Sequência}
+
+\section{Principais Componentes do Diagrama de Sequência}
+
+\section{Exemplo do Diagrama de Sequência}
+
+\chapter{Diagrama de Comunicação}
+
+\section{Objetivo do Diagrama de Comunicação}
+
+\section{Principais Componentes do Diagrama de Comunicação}
+
+\section{Exemplo do Diagrama de Comunicação}
+
+\chapter{Diagrama de Estrutura Composta}
+
+\section{Objetivo do Diagrama de Estrutura Composta}
+
+\section{Principais Componentes do Diagrama de Estrutura Composta}
+
+\section{Exemplo do Diagrama de Estrutura Composta}
+
+\chapter{Diagrama de Pacotes}
+
+\section{Objetivo do Diagrama de Pacotes}
+
+\section{Principais Componentes do Diagrama de Pacotes}
+
+\section{Exemplo do Diagrama de Pacotes}
+
+\chapter{Objetivos dos demais Diagramas da UML}
+
+\chapter{Conclusão}
+
+\citeoption{opcoes}
+\postextual
+\bibliography{refencias}
+
+\end{document}
