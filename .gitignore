@@ -1,0 +1,26 @@
+# https://gist.github.com/misberner/8316891
+# LaTeX temporary files
+*.aux
+*.log
+*.toc
+
+# PDF output - usually a bad idea to keep this in Git
+*.pdf
+
+# Latexmk
+*.fdb_latexmk
+
+# SyncTeX
+*.synctex.gz
+
+# LaTeX Beamer
+*.snm
+*.vrb
+*.nav
+*.out
+*.fls
+*.lof
+*.lot
+*.pdf
+*.bbl
+*.blg
