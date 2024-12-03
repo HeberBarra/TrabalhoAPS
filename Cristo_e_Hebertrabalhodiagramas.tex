@@ -26,7 +26,7 @@
 \local{Curitiba}
 \preambulo{Trabalho de pesquisa sobre diagramas UML.}
 \tipotrabalho{pesquisa}
-\orientador{Elaini Simoni Angelotti}
+\orientador{MSc. Elaini Simoni Angelotti}
 
 \makeatletter
 \hypersetup{
@@ -36,7 +36,7 @@
     colorlinks=true,
     linkcolor=black,
     urlcolor=blue,
-		citecolor=black
+	citecolor=black
 }
 \makeatother
 
@@ -124,6 +124,10 @@ Assim como é necessário planejamento para construir-se um prédio, também faz
 
 Em termos simples, a modelagem é capturar a visão de um sistema, descrevendo o que deve ser incluído no sistema, os aspectos estruturais e comportamentais e os demais requisitos do sistema. Cada componente da modelagem descreve aspectos específicos de um sistema, sem se preocupar com o restante que é explicado por outros componentes.
 
+A complexidade dos sistemas de informação, segundo Eduardo(pg. 11), vêm do fato de serem formados a partir da combinação de dados, pessoas, processos, telas, redes de comunicação e demais tecnologias que interagem entre si, que devem agregar valor aos usuários, em especial os softwares, e aumentam a produtividade dos utilizadores e precisam compensar os recursos gastos no seu desenvolvimento.
+
+Na UML existem dois tipos de diagramas, o estrutural e o comportamental. Os diagramas estruturais definem a estrutura do sistema de informação, e como cada componente conversa entre si. Os diagramas comportamentais definem os comportamentos do sistema, ou seja, o que ele pode fazer e como ele faz cada coisa. De acordo com Eduardo(pg 28), os seguintes diagramas são estruturais: Diagrama de Objetos, Diagrama de Estrutura Composta, Diagrama de Classes, Diagrama de Componentes, Diagrama de Implantação e o Diagrama de Pacotes. E os seguintes diagramas são comportamentais: Diagrama de Atividades, Diagrama de Sequência, Diagrama de Visão Geral da Interação, Diagrama de Temporização, Diagrama de Colaboração, Diagrama de Transições de Estado e o Diagrama de Casos de Uso.
+
 \chapter{Diagrama de Atividades}
 
 \section{Objetivo do Diagrama de Atividades}
@@ -158,11 +162,40 @@ Em termos simples, a modelagem é capturar a visão de um sistema, descrevendo o
 
 \chapter{Diagrama de Pacotes}
 
-\section{Objetivo do Diagrama de Pacotes}
+O diagrama de pacotes é um diagrama estrutural e tem como objetivo, segundo GUEDES(2018, pg. 274), separar as camadas de um projeto de software e descrever como os elementos estão organizados em divisões lógicas, que são chamadas de pacotes, e ainda permite modelar as subdivisões da arquitetura de uma linguagem ou de um processo de desenvolvimento.
 
 \section{Principais Componentes do Diagrama de Pacotes}
 
+\begin{figure}
+	\caption{Representação gráfica do Pacote}
+	\centering
+	\includegraphics[scale=0.5]{img/Pacote.png}
+	\\
+
+	\label{ElementoPacote}
+	\footnotesize\raggedright Fonte: Dos Autores(2024)
+\end{figure}
+
+O principal componente do diagrama de atividade é o pacote, que agrupa os elementos e nomeia esses grupos. Os pacotes podem representar sistemas, subsistemas, bibliotecas ou etapas de desenvolvimento. Um pacote pode ser contido dentro outro sem problemas. O conteúdo de um pacote não precisa ser explicitamente declarado, sendo isso desejável para poupar espaço na representação, contudo, é possível mostrar todas as informações dos conteúdos do pacote, como os métodos, atributos e relacionamentos das classes do sistema.
+
+Um pacote pode depender de outro, existindo dois relacionamentos de dependência entre pacotes, o \textit{<<merge>>}, que indica uma combinação dos conteúdos do pacote  e o \textit{<<import>>} que indica a utilização de elementos/característica de outro pacote.  As dependências são indicadas através de setas pontilhadas, opcionalmente, com o texto \textit{<<import>>} ou \textit{<<merge>>} em cima para indicar o tipo de dependência.
+
+Estereótipos podem ser aplicados aos pacotes para indicar o seu tipo, seja \textit{framework}, \textit{system}, \textit{subsystem} ou \textit{model}. Os estereótipos \textit{framework} e \textit{system} são representados textualmente, colocando-os antes do nome do pacote, enquanto os outros são representados graficamente.
+
 \section{Exemplo do Diagrama de Pacotes}
+
+\begin{figure}[!htp]
+	\caption{Exemplo do Diagrama de Pacotes}
+	\centering
+	\includegraphics[scale=0.5]{img/ExemploDiagramaPacotes.png}
+	\\
+
+	\label{ExemploPacotes}
+	\footnotesize\raggedright Fonte: Dos Autores(2024)
+\end{figure}
+
+A \autoref{ExemploPacotes} mostra o pacote configurador do programa heber-modelo. O diagrama mostra todos os componentes do pacote, porém não os detalha, em outras palavras, não mostra os métodos e atributos da classe, nem as relações entre elas, e não mostra os conteúdos dos subpacotes.
+
 
 \chapter{Objetivos dos demais Diagramas da UML}
 
@@ -173,5 +206,9 @@ Em termos simples, a modelagem é capturar a visão de um sistema, descrevendo o
 \citeoption{opcoes}
 \postextual
 \bibliography{referencias}
+
+\nocite{GUEDES}
+\nocite{BEZERRA}
+\nocite{LARMAN}
 
 \end{document}
