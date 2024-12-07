@@ -191,10 +191,27 @@ Na \autoref{ExemploSequencia} é mostrado um simples sistema de compra de itens,
 \chapter{Diagrama de Comunicação}
 
 \section{Objetivo do Diagrama de Comunicação}
+Segundo GUEDES(2018, pg. 352) o diagrama de comunicação, antes conhecido como diagrama de colaboração, é um diagrama comportamental, complementar ao diagrama de sequência, contendo informações parecidas e com os mesmos elementos gráficos, porém com um foco diferente, se concentrando em como cada elemento está vinculado e quais mensagens eles trocam entre si durante um processo específico.
+
+Por não suportar ocorrências de interação ou fragmentos combinados, os diagramas de comunicação são utilizados para a modelagem de processos mais simples e/ou com menos detalhes.
 
 \section{Principais Componentes do Diagrama de Comunicação}
 
 \section{Exemplo do Diagrama de Comunicação}
+
+\begin{figure}[!htp]
+	\caption{Exemplo do Diagrama de Comunicação}
+	\centering
+	\includegraphics[scale=0.3]{img/Exemplo Diagrama de Comunicação.png}
+	\\
+
+	\label{ExemploComunicação}
+	\footnotesize\raggedright Fonte: GUEDES(2018)
+\end{figure}
+
+A \autoref{ExemploComunicação} mostra o diagrama de comunicação para o caso de uso Emitir Saldo, demonstrando as suas etapas utilizando mensagens, com os parâmetros necessários e as linhas de vida.
+
+Para emitir o saldo o cliente deve inserir o cartão da sua conta e informar sua senha, o sistema pega o número da conta através do cartão e utiliza ele para consultar a conta, caso a senha esteja certa o sistema emite o saldo da conta como um double.
 
 \chapter{Diagrama de Estrutura Composta}
 
