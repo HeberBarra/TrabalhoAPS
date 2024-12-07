@@ -166,11 +166,27 @@ Na \autoref{ExemploDiagramaAtividades} é apresentado o exemplo de emitir o sald
 
 \chapter{Diagrama de Sequência}
 
+De acordo com LARMAN(2007, pg. 145) os diagramas de sequência são um dos diagramas comportamentais e servem para ilustrar os eventos gerados pelos atores do sistema. Para criar o diagrama de sequência é necessário definir os casos de uso, em outras palavras, é preciso definir o comportamento do sistema, sendo o que ele faz, mas não especificamente como é feito.
+
 \section{Objetivo do Diagrama de Sequência}
+
+Os diagramas de sequência ilustram e isolam os eventos gerados pelos casos de uso executados pelos atores do sistema. Um diagrama de sequência mostra, para um caso de uso específico, os eventos gerados por atores externos, a ordem e os eventos do sistema. A ênfase do diagrama são os eventos que atravessam a fronteira do sistema entre os outros sistemas.
 
 \section{Principais Componentes do Diagrama de Sequência}
 
 \section{Exemplo do Diagrama de Sequência}
+
+\begin{figure}[!htp]
+	\caption{Exemplo do Diagrama de Atividades}
+	\centering
+	\includegraphics[scale=0.5]{img/Exemplo Diagrama de Sequência.png}
+	\\
+
+	\label{ExemploSequencia}
+	\footnotesize\raggedright Fonte: LARMAN(2007)
+\end{figure}
+
+Na \autoref{ExemploSequencia} é mostrado um simples sistema de compra de itens, cujo único ator é o atendente do caixa. Este diagrama de sequência ilustra os eventos de um caso de uso que pode ser executado pelo caixa. O primeiro evento é o entrarItem, que recebe como parâmetros o código universal do produto e a quantidade desejada. O evento terminarVenda indica o término da conta, ou seja, que todos os itens solicitados pelo cliente foram registrados. O último do evento deste caso de uso, o registrarPagamento, registra no sistema a quantidade de dinheiro recebida pelo caixa.  O caso de uso permanece uma caixa-preta, revelando apenas o que é feito, sem expor como isso é feito.
 
 \chapter{Diagrama de Comunicação}
 
@@ -189,6 +205,8 @@ Na \autoref{ExemploDiagramaAtividades} é apresentado o exemplo de emitir o sald
 \section{Exemplo do Diagrama de Estrutura Composta}
 
 \chapter{Diagrama de Pacotes}
+
+\section{Objetivo do Diagrama de Pacotes}
 
 O diagrama de pacotes é um diagrama estrutural e tem como objetivo, segundo GUEDES(2018, pg. 274), separar as camadas de um projeto de software e descrever como os elementos estão organizados em divisões lógicas, que são chamadas de pacotes, e ainda permite modelar as subdivisões da arquitetura de uma linguagem ou de um processo de desenvolvimento.
 
@@ -254,5 +272,6 @@ Conforme GUEDES(2018, pg. 515), o Diagrama de Tempo é similar ao Diagrama de M�
 \nocite{GUEDES}
 \nocite{BEZERRA}
 \nocite{LARMAN}
+\nocite{UML}
 
 \end{document}
